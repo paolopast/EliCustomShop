@@ -1,0 +1,18 @@
+:root {
+  color-scheme: light;
+  --surface-0: #f6efe5;
+  --surface-1: #efe3d3;
+  --surface-2: #e5d4bf;
+  --surface-3: #d8c1a7;
+  --surface-contrast: #4d392d;
+  --text-strong: #412f24;
+  --text-muted: rgba(65, 47, 36, 0.78);
+  --text-soft: rgba(65, 47, 36, 0.56);
+  --line-soft: rgba(89, 67, 50, 0.12);
+  --accent: #b58f69;
+  --accent-rgb: 181, 143, 105;
+  --shadow-card: 0 24px 60px rgba(86, 61, 42, 0.08);
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --pswp-bg: rgba(69, 49, 35, 0.95);
+}

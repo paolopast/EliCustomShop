@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F6EFE5"/>
+  <rect x="56" y="56" width="1088" height="518" rx="28" fill="#FBF7F0" stroke="rgba(89,67,50,0.14)" stroke-width="2"/>
+  <rect x="88" y="84" width="220" height="1" fill="#B58F69"/>
+  <text x="88" y="182" fill="#412F24" font-family="'Cormorant Garamond', serif" font-size="126" font-weight="600" letter-spacing="1.5">
+    ELI
+  </text>
+  <text x="88" y="292" fill="#412F24" font-family="'Cormorant Garamond', serif" font-size="126" font-weight="600" letter-spacing="1.5">
+    ATELIER
+  </text>
+  <text x="88" y="384" fill="#715542" font-family="'Manrope', Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="4">
+    SCARPE CUSTOM E SNEAKERS SU MISURA
+  </text>
+  <text x="88" y="470" fill="#715542" font-family="'Manrope', Arial, sans-serif" font-size="24" font-weight="500" letter-spacing="1.8">
+    bespoke craftsmanship // Milano // warm editorial luxury
+  </text>
+  <rect x="820" y="120" width="250" height="320" rx="26" fill="#EADBC7"/>
+  <rect x="852" y="152" width="186" height="256" rx="20" fill="#CBB295"/>
+  <text x="1034" y="520" fill="#B58F69" font-family="'Manrope', Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">
+    01
+  </text>
+</svg>

@@ -1,0 +1,230 @@
+@import './styles/tokens.css';
+@import 'tailwindcss';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'photoswipe/style.css';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background:
+      radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.12), transparent 28%),
+      radial-gradient(circle at 12% 12%, rgba(255, 255, 255, 0.62), transparent 24%),
+      linear-gradient(180deg, #fbf6ef 0%, var(--surface-0) 28%, #efe2d0 100%);
+  }
+
+  body {
+    min-height: 100vh;
+    background: transparent;
+    color: var(--text-strong);
+    font-family: var(--font-body);
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  p,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  span {
+    font-family: var(--font-body);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #f9f4ec;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    outline: none;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    box-shadow:
+      0 0 0 2px rgba(var(--accent-rgb), 0.72),
+      0 0 0 5px rgba(246, 239, 229, 1);
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-[96rem] px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply mb-4 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-[color:var(--text-soft)];
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 2.25rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(89, 67, 50, 0.18), rgba(var(--accent-rgb), 0.86));
+    display: inline-block;
+  }
+
+  .display-title {
+    font-family: var(--font-display);
+    @apply text-5xl font-semibold leading-[0.94] sm:text-6xl lg:text-8xl;
+  }
+
+  .display-title-compact {
+    font-family: var(--font-display);
+    @apply text-4xl font-semibold leading-[0.96] sm:text-5xl lg:text-6xl;
+  }
+
+  .body-copy {
+    @apply text-base leading-8 text-[color:var(--text-muted)] sm:text-lg;
+  }
+
+  .body-small {
+    @apply text-sm leading-7 text-[color:var(--text-soft)];
+  }
+
+  .meta-pill {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em];
+    border-color: rgba(89, 67, 50, 0.14);
+    background: rgba(255, 251, 245, 0.72);
+    color: rgba(65, 47, 36, 0.72);
+  }
+
+  .editorial-card {
+    @apply relative overflow-hidden rounded-[1.35rem] border backdrop-blur-sm;
+    border-color: rgba(89, 67, 50, 0.1);
+    background: rgba(255, 250, 244, 0.74);
+    box-shadow: var(--shadow-card);
+  }
+
+  .tactile-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-[999px] border px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] transition duration-200;
+    border-color: rgba(77, 57, 45, 0.08);
+    background: var(--surface-contrast);
+    color: #f9f3ea;
+  }
+
+  .tactile-button:hover {
+    border-color: rgba(var(--accent-rgb), 0.42);
+    background: #614838;
+  }
+
+  .tactile-button-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-[999px] border px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] transition duration-200;
+    border-color: rgba(89, 67, 50, 0.14);
+    background: rgba(255, 251, 245, 0.32);
+    color: var(--text-strong);
+  }
+
+  .tactile-button-dark:hover {
+    border-color: rgba(var(--accent-rgb), 0.42);
+    background: rgba(255, 250, 244, 0.72);
+  }
+
+  .accent-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.54), transparent);
+  }
+
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.025;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='%23624b3a' fill-opacity='0.55'%3E%3Ccircle cx='12' cy='18' r='1'/%3E%3Ccircle cx='74' cy='52' r='1'/%3E%3Ccircle cx='128' cy='86' r='1'/%3E%3Ccircle cx='96' cy='144' r='1'/%3E%3Ccircle cx='150' cy='24' r='1'/%3E%3Ccircle cx='36' cy='126' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(89, 67, 50, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(89, 67, 50, 0.04) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+  }
+
+  .form-label {
+    @apply mb-2 block text-[11px] font-semibold uppercase tracking-[0.24em] text-[color:var(--text-soft)];
+  }
+
+  .form-field {
+    @apply w-full rounded-[1rem] border px-4 py-3 text-sm transition duration-200;
+    border-color: rgba(89, 67, 50, 0.12);
+    background: rgba(255, 251, 245, 0.9);
+    color: var(--text-strong);
+  }
+
+  .form-field::placeholder {
+    color: rgba(65, 47, 36, 0.38);
+  }
+
+  .form-field:hover {
+    border-color: rgba(89, 67, 50, 0.2);
+  }
+
+  .form-field:focus {
+    border-color: rgba(var(--accent-rgb), 0.6);
+    background: rgba(255, 251, 245, 1);
+  }
+
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .marquee-track {
+    @apply flex w-max items-center gap-8 whitespace-nowrap;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: rgba(89, 67, 50, 0.22);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+
+.pswp__bg {
+  background: rgba(69, 49, 35, 0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
