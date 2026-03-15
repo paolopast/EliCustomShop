@@ -16,7 +16,7 @@ export class SeoService {
 
   update(payload: SeoPayload): void {
     const pageTitle = payload.title ?? 'Eli Atelier';
-    const ogImage = payload.ogImage ?? '/og-image.svg';
+    const ogImage = payload.ogImage ?? 'og-image.svg';
 
     this.title.setTitle(pageTitle);
     this.meta.updateTag({ name: 'description', content: payload.description });

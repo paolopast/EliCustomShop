@@ -56,9 +56,6 @@
             },
             "github-pages": {
               "outputMode": "static",
-              "prerender": {
-                "discoverRoutes": true
-              },
               "outputHashing": "all"
             },
             "development": {
