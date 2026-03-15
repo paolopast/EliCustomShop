@@ -15,7 +15,7 @@ export class SeoService {
   private readonly title = inject(Title);
 
   update(payload: SeoPayload): void {
-    const pageTitle = payload.title ?? 'ELI Custom Studio';
+    const pageTitle = payload.title ?? 'Eli Atelier';
     const ogImage = payload.ogImage ?? '/og-image.svg';
 
     this.title.setTitle(pageTitle);

@@ -8,8 +8,8 @@ import {
   ViewChild,
   inject
 } from '@angular/core';
-import { ABOUT_PILLARS, BRAND_STATS } from '../../core/data/site.data';
 import { initSectionReveal } from '../../core/animations/motion';
+import { ABOUT_PILLARS, BRAND_STATS } from '../../core/data/site.data';
 import { CtaBlockComponent } from '../../shared/sections/cta-block.component';
 import { PageHeroComponent } from '../../shared/sections/page-hero.component';
 
@@ -21,8 +21,8 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
     <main id="main-content" #pageRoot>
       <app-page-hero
         eyebrow="About the brand"
-        title="Street culture, craftsmanship e design con una posizione chiara."
-        description="ELI Custom Studio nasce per chi non cerca una scarpa personalizzata qualsiasi, ma un paio che abbia intensità, progetto e presenza."
+        title="Un atelier che interpreta il bespoke con calma, cultura materiale e gusto italiano."
+        description="Eli Atelier nasce per dare forma a scarpe custom e sneakers su misura che uniscano artigianalita, tatto, proporzione e una presenza sempre misurata."
         [stats]="stats"
         secondaryLabel="Apri la gallery"
         secondaryLink="/gallery"
@@ -31,8 +31,8 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
       <section class="section-shell section-space pt-4">
         <div class="editorial-card p-6 sm:p-8 lg:p-10" data-reveal>
           <p class="eyebrow">Brand story</p>
-          <p class="max-w-4xl text-2xl leading-10 text-white sm:text-3xl sm:leading-[1.35]">
-            L’idea è semplice: costruire custom sneakers e scarpe che abbiano la precisione di un prodotto curato e l’energia di una reference giusta.
+          <p class="max-w-4xl text-2xl leading-10 text-[color:var(--text-strong)] sm:text-3xl sm:leading-[1.35]">
+            L idea e semplice: creare un paio su misura che si integri con naturalezza nel modo di vestire di chi lo sceglie, senza eccessi ma con una presenza chiara.
           </p>
         </div>
       </section>
@@ -40,7 +40,7 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
       <section class="section-shell section-space">
         <div class="grid gap-6">
           @for (pillar of pillars; track pillar.title) {
-            <article data-reveal class="grid gap-6 border-t border-white/8 pt-6 lg:grid-cols-[0.42fr,0.58fr] lg:items-center">
+            <article data-reveal class="grid gap-6 border-t border-[color:var(--line-soft)] pt-6 lg:grid-cols-[0.42fr,0.58fr] lg:items-center">
               <div class="editorial-card overflow-hidden">
                 <img
                   [ngSrc]="pillar.image"
@@ -52,12 +52,12 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
               </div>
 
               <div class="space-y-4">
-                <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                   0{{ $index + 1 }}
                 </p>
                 <h2 class="display-title-compact">{{ pillar.title }}</h2>
                 <p class="body-copy max-w-2xl">{{ pillar.description }}</p>
-                <p class="text-sm uppercase tracking-[0.24em] text-white/48">{{ pillar.note }}</p>
+                <p class="text-sm uppercase tracking-[0.18em] text-[color:var(--text-soft)]">{{ pillar.note }}</p>
               </div>
             </article>
           }
@@ -65,8 +65,8 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
       </section>
 
       <app-cta-block
-        title="Se cerchi un paio che dica qualcosa di preciso sul tuo stile, qui parte il lavoro giusto."
-        description="Raccontaci contesto, outfit, mood e modello di partenza. Il resto si costruisce con metodo e occhio."
+        title="Se cerchi un paio capace di accompagnare il tuo stile con eleganza naturale, il dialogo puo iniziare qui."
+        description="Raccontaci occasione, sensibilita cromatica e dettagli desiderati. Il progetto prendera forma con misura e precisione."
       />
     </main>
   `

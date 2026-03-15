@@ -53,10 +53,10 @@ export class SiteShellComponent {
 
     const data = route.snapshot.data as SeoRouteData | undefined;
     this.seo.update({
-      title: route.snapshot.title ?? 'ELI Custom Studio',
+      title: route.snapshot.title ?? 'Eli Atelier',
       description:
         data?.description ??
-        'ELI Custom Studio crea sneakers e scarpe custom premium tra streetwear, artigianalita e design su misura.',
+        'Eli Atelier crea scarpe custom e sneakers su misura con toni caldi, materiali selezionati e lavorazione artigianale.',
       ogImage: data?.ogImage
     });
   }

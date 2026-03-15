@@ -8,8 +8,8 @@ import {
   ViewChild,
   inject
 } from '@angular/core';
-import { FAQ_GROUPS } from '../../core/data/site.data';
 import { initSectionReveal } from '../../core/animations/motion';
+import { FAQ_GROUPS } from '../../core/data/site.data';
 import { CtaBlockComponent } from '../../shared/sections/cta-block.component';
 import { FaqAccordionComponent } from '../../shared/sections/faq-accordion.component';
 import { PageHeroComponent } from '../../shared/sections/page-hero.component';
@@ -22,8 +22,8 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
     <main id="main-content" #pageRoot>
       <app-page-hero
         eyebrow="FAQ"
-        title="Tempi, taglie, materiali, spedizioni e tutto quello che serve sapere prima di partire."
-        description="Risposte snelle ma precise sulle richieste custom più frequenti. Se il tuo progetto è particolare, il form resta il punto migliore per parlarne."
+        title="Tempi, taglie, materiali e tutto cio che serve sapere prima di iniziare."
+        description="Risposte essenziali ma precise sul servizio su misura. Se la tua richiesta ha esigenze particolari, il form resta il punto migliore per parlarne."
         secondaryLabel="Apri il form"
         secondaryLink="/contact"
       />
@@ -44,8 +44,8 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
       </section>
 
       <app-cta-block
-        title="Hai una richiesta fuori standard o una deadline delicata? Meglio parlarne con il brief giusto."
-        description="Indicaci modello, uso finale, palette e tempi. Ti diciamo subito se il progetto è fattibile e con quale percorso."
+        title="Se desideri chiarire una richiesta particolare o una tempistica delicata, preferiamo parlarne con un brief completo."
+        description="Indicaci modello, occasione, palette e data di riferimento. Ti diremo subito se il progetto puo essere sviluppato nei tempi giusti."
       />
     </main>
   `

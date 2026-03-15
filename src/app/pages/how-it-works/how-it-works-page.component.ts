@@ -8,8 +8,8 @@ import {
   ViewChild,
   inject
 } from '@angular/core';
-import { PROCESS_STEPS } from '../../core/data/site.data';
 import { initSectionReveal } from '../../core/animations/motion';
+import { PROCESS_STEPS } from '../../core/data/site.data';
 import { CtaBlockComponent } from '../../shared/sections/cta-block.component';
 import { PageHeroComponent } from '../../shared/sections/page-hero.component';
 import { ProcessTimelineComponent } from '../../shared/sections/process-timeline.component';
@@ -23,8 +23,8 @@ import { SectionHeadingComponent } from '../../shared/sections/section-heading.c
     <main id="main-content" #pageRoot>
       <app-page-hero
         eyebrow="How it works"
-        title="Un processo in quattro step, pensato per trasformare gusto e brief in un paio credibile."
-        description="Nessun passaggio superfluo: partiamo dalla silhouette giusta, definiamo materiali e dettagli, approvi il concept, poi produciamo e consegniamo."
+        title="Un processo in quattro passaggi, costruito per accompagnare ogni scelta con calma e chiarezza."
+        description="Dal modello base alla consegna, il percorso resta essenziale e leggibile: forma, materiali, approvazione e lavorazione finale."
         secondaryLabel="Richiedi il tuo paio"
         secondaryLink="/contact"
       />
@@ -33,8 +33,8 @@ import { SectionHeadingComponent } from '../../shared/sections/section-heading.c
         <app-section-heading
           data-reveal
           eyebrow="Il metodo"
-          title="Ogni fase riduce il rumore e aumenta precisione."
-          description="Il valore del custom non sta solo nel risultato finale, ma nel fatto che ogni decisione venga presa con un motivo chiaro."
+          title="Ogni fase serve a dare ordine al progetto e continuita al risultato finale."
+          description="Il valore di una creazione su misura non sta solo nel dettaglio finale, ma nella qualita delle decisioni prese lungo il percorso."
         />
 
         <div class="mt-10">
@@ -46,19 +46,19 @@ import { SectionHeadingComponent } from '../../shared/sections/section-heading.c
         <div class="grid gap-5 lg:grid-cols-3">
           @for (item of workflowNotes; track item.title) {
             <article data-reveal class="editorial-card p-5">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                 {{ item.label }}
               </p>
               <h2 class="mt-4 font-[var(--font-display)] text-4xl leading-none">{{ item.title }}</h2>
-              <p class="mt-4 text-sm leading-7 text-white/72">{{ item.description }}</p>
+              <p class="mt-4 text-sm leading-7 text-[color:var(--text-muted)]">{{ item.description }}</p>
             </article>
           }
         </div>
       </section>
 
       <app-cta-block
-        title="Hai già una data evento o un drop da preparare? Il briefing parte da qui."
-        description="Più ci dai contesto, più la proposta arriva pulita: modello, palette, deadline, references e budget."
+        title="Hai una data importante o un idea gia molto chiara? Il percorso puo iniziare con un brief ordinato."
+        description="Condividi modello, toni, riferimenti e tempistiche: ti aiuteremo a definire una proposta coerente e realizzabile."
       />
     </main>
   `
@@ -71,21 +71,21 @@ export class HowItWorksPageComponent implements AfterViewInit, OnDestroy {
   protected readonly workflowNotes = [
     {
       label: '01',
-      title: 'Base model',
+      title: 'Silhouette',
       description:
-        'La forma conta. Una custom forte parte dalla silhouette che regge davvero il tipo di outfit e l’occasione d’uso.'
+        'La forma viene scelta in relazione all occasione d uso, alla presenza desiderata e al comfort necessario.'
     },
     {
       label: '02',
-      title: 'Direzione creativa',
+      title: 'Materia',
       description:
-        'Palette, materiali, lettering e grado di impatto vengono messi in ordine prima di toccare il prodotto finale.'
+        'Toni, pellami, suede e finiture entrano nel progetto con un equilibrio pensato per durare nel tempo.'
     },
     {
       label: '03',
-      title: 'Execution',
+      title: 'Cura finale',
       description:
-        'Produzione, finitura, controllo qualità e consegna restano allineati alla direzione approvata, senza scorciatoie.'
+        'Produzione, controllo e consegna restano allineati alla proposta approvata, senza passaggi superflui.'
     }
   ];
 

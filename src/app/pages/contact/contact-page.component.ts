@@ -8,8 +8,8 @@ import {
   ViewChild,
   inject
 } from '@angular/core';
-import { CONTACT_DETAILS } from '../../core/data/site.data';
 import { initSectionReveal } from '../../core/animations/motion';
+import { CONTACT_DETAILS } from '../../core/data/site.data';
 import { ContactFormComponent } from '../../shared/sections/contact-form.component';
 import { PageHeroComponent } from '../../shared/sections/page-hero.component';
 
@@ -21,8 +21,8 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
     <main id="main-content" #pageRoot>
       <app-page-hero
         eyebrow="Contact / Request your custom pair"
-        title="Parlaci del tuo paio: brief, colori, budget, deadline e riferimenti."
-        description="Questo form è pensato per trasformare gusto e intent in un progetto leggibile. Più dettagli ci dai, più la proposta sarà netta."
+        title="Raccontaci il tuo paio: modello, materiali, palette, budget e occasione."
+        description="Il form e pensato per trasformare il tuo gusto in una proposta chiara. Piu il brief e preciso, piu il progetto potra essere calibrato con accuratezza."
         [stats]="heroStats"
         secondaryLabel="FAQ"
         secondaryLink="/faq"
@@ -33,7 +33,7 @@ import { PageHeroComponent } from '../../shared/sections/page-hero.component';
           @for (detail of heroStats; track detail.label) {
             <article class="editorial-card p-5">
               <p class="font-[var(--font-display)] text-4xl leading-none">{{ detail.value }}</p>
-              <p class="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-white/54">
+              <p class="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--text-soft)]">
                 {{ detail.label }}
               </p>
             </article>

@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "index": "index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -51,6 +52,13 @@
                   "maximumError": "8kB"
                 }
               ],
+              "outputHashing": "all"
+            },
+            "github-pages": {
+              "outputMode": "static",
+              "prerender": {
+                "discoverRoutes": true
+              },
               "outputHashing": "all"
             },
             "development": {

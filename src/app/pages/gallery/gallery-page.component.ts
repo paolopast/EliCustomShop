@@ -8,8 +8,8 @@ import {
   ViewChild,
   inject
 } from '@angular/core';
-import { BRAND_STATS, GALLERY_ITEMS } from '../../core/data/site.data';
 import { initSectionReveal } from '../../core/animations/motion';
+import { BRAND_STATS, GALLERY_ITEMS } from '../../core/data/site.data';
 import { CtaBlockComponent } from '../../shared/sections/cta-block.component';
 import { GalleryGridComponent } from '../../shared/sections/gallery-grid.component';
 import { PageHeroComponent } from '../../shared/sections/page-hero.component';
@@ -23,8 +23,8 @@ import { SectionHeadingComponent } from '../../shared/sections/section-heading.c
     <main id="main-content" #pageRoot>
       <app-page-hero
         eyebrow="Gallery / Portfolio"
-        title="Texture, close-up e paia finite costruite per mostrare mano e carattere."
-        description="Una selezione di dettagli reali: superfici, layering, materiali e tagli visivi che raccontano il livello del lavoro."
+        title="Una gallery curata per raccontare pellami, cuciture, luce e finiture."
+        description="La materia viene osservata da vicino, con un ritmo editoriale sobrio e pensato per lasciare spazio alla qualita del dettaglio."
         [stats]="stats"
       />
 
@@ -32,8 +32,8 @@ import { SectionHeadingComponent } from '../../shared/sections/section-heading.c
         <app-section-heading
           data-reveal
           eyebrow="Editorial grid"
-          title="Una gallery pensata come un lookbook tecnico."
-          description="Ogni scatto mette a fuoco qualcosa di diverso: shape, finish, contrasto, lettering, texture, equilibrio."
+          title="Texture, tono e lavorazione diventano il vero linguaggio visivo del progetto."
+          description="Ogni immagine isola un aspetto della costruzione: profondita della pelle, delicatezza del suede, cucitura, equilibrio delle superfici."
           [split]="true"
         />
 
@@ -46,19 +46,19 @@ import { SectionHeadingComponent } from '../../shared/sections/section-heading.c
         <div class="grid gap-5 lg:grid-cols-3">
           @for (detail of craftsmanshipNotes; track detail.title) {
             <article data-reveal class="editorial-card p-5">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">
                 {{ detail.tag }}
               </p>
               <h2 class="mt-4 font-[var(--font-display)] text-4xl leading-none">{{ detail.title }}</h2>
-              <p class="mt-4 text-sm leading-7 text-white/72">{{ detail.description }}</p>
+              <p class="mt-4 text-sm leading-7 text-[color:var(--text-muted)]">{{ detail.description }}</p>
             </article>
           }
         </div>
       </section>
 
       <app-cta-block
-        title="Hai visto una direzione che senti vicina? Portiamola sul tuo brief."
-        description="Compila la richiesta con i riferimenti giusti e costruiamo un concept che abbia la tua stessa intensità visiva."
+        title="Se una materia, un tono o una finitura ti sembra gia vicina, possiamo partire da li."
+        description="Condividi il tuo riferimento e costruiremo una proposta coerente con il tuo guardaroba, il tuo momento e la tua sensibilita."
       />
     </main>
   `
@@ -71,22 +71,22 @@ export class GalleryPageComponent implements AfterViewInit, OnDestroy {
   protected readonly stats = BRAND_STATS;
   protected readonly craftsmanshipNotes = [
     {
-      tag: 'Texture',
-      title: 'La materia deve reggere la luce dura.',
+      tag: 'Pelle',
+      title: 'La luce restituisce la qualita del materiale.',
       description:
-        'Pelle, mesh, vernice e trattamenti vengono scelti per funzionare dal vivo, non solo per una foto ben riuscita.'
+        'Un buon pellame non ha bisogno di effetti forti: racconta da solo profondita, morbidezza e densita cromatica.'
     },
     {
-      tag: 'Proporzione',
-      title: 'Il dettaglio serve la silhouette.',
+      tag: 'Cucitura',
+      title: 'La precisione si percepisce nei dettagli minimi.',
       description:
-        'Una custom forte non è piena di elementi. È piena di decisioni utili che rispettano forma, proporzione e outfit.'
+        'Linea, allineamento e pulizia accompagnano la forma generale e contribuiscono a dare ordine all intero paio.'
     },
     {
-      tag: 'Finish',
-      title: 'Ogni paio chiude con un controllo finale.',
+      tag: 'Finitura',
+      title: 'Ogni progetto chiude con un controllo visivo e tattile.',
       description:
-        'Pulizia, uniformità, resistenza e resa visiva vengono rivisti prima di box e spedizione.'
+        'La cura finale serve a confermare equilibrio, continuita delle superfici e coerenza rispetto alla proposta iniziale.'
     }
   ];
 
